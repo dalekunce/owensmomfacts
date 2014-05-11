@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Owen's Mom Facts</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+	<style>
+		body {
+			background-color: LightCoral;
+		}
+		.row {
+			padding-top: 20px;
+		}
+		#pic {
+			height: 400px;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		#momfact {
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row" class="col-md-12">
+			<div class="col-md-10">
+				<h1>Owen's Mom Facts</h1>
+			</div>
+			<div  class="col-md-2">
+				<input type="button" value="Reload page" onclick="reloadPage()">
+			</div>
+		</div>
+		<div class="row" class="col-md-12">
+			<div id='pic' class="col-md-4">
+			</div>
+			<div  class="col-md-8">
+				<h1 id='momfact'></h1>
+
+			</div>
+		</div>
+		<div class="row" class="col-md-12">
+			<p>Happy Mother's Day Katy</p>
+		</div>
+	</div>
+	<script>
+		var textArray = [
+		"Mom is always patient",
+		"Mom does all the laundry",
+		"Mom wipes Owen's bottom",
+		"Mom was in labor for 25 hours",
+		"Mom hasn't once offered Owen in a trade for a girl",
+		"Mom stopped having kids because I was enough",
+		"Mom hasn't had a full night's sleep in almost 4 years",
+		"Mom had back pain for 9 months that would cripple an old person",
+		"Mom once puked in a paper bag because that was all she could find",
+		"Mom loves to give Owen hugs and kisses",
+		"Mom rushes home from work everyday to see me",
+		"Mom loves the way I smile",
+		"Mom gives me hugs when I'm sad",
+		"Mom fully embraces the need to kiss my boo-boos",
+		"Mom loves me even though I've vomited on her many many times",
+		"Mom makes me smoothies for breakfast way more than I deserve",
+		"Mom could show the middle east how to negotiate after getting me to brush my own teeth",
+		"I peed on mom once, she wiped it up and didn't care",
+		"I pooped on mom at a whole foods and she had poop on here shirt for a good 20 min",
+		"Mom takes me to get haircuts so I don't start looking like carrot top",
+		"She passed on her day walker genes to me",
+		"Mom once put ice packs in my stroller to keep me from overheating in the DC summer",
+		"Mom loves to run and play soccer",
+		"Mom reads me stories almost every night",
+		"Mom helps me make cookies for my teachers",
+		"Mom has hair just like mine",
+		"Mom is an expert Amazon.com shopper",
+		"Mom likes to buy me awesome gifts",
+		"Mom thinks I'm the most awesome ever",
+		"Mom is pretty sure I am the cutest kid in the world",
+		"Mom loves to wake up with me to watch the sun come up",
+		"Mom has taught me all about beautiful flowers",
+		"Mom makes sure I always hold here hand when we cross the street",
+		"Mom is always kind to me",
+		"Mom makes me laugh all the time",
+		"Mom is my mom",
+		"Mom has an awesome mom who is my grandma",
+		"Mom is a great teacher",
+		"Mom can run super fast, especially down the stairs to get Mabel off the counter",
+		"Mom knows all the best ways to calm me down",
+		"Mom let me incubate inside of her like some crazy sci-fi story plot",
+		"Mom always helps me clean up my messes",
+		"Mom knows where the best stickers are"
+		];
+		var randomNumber = Math.floor(Math.random()*textArray.length);
+
+		$('#momfact').append(textArray[randomNumber]);
+
+		$('#pic').css({'background-image': 'url(images/' + Math.floor(Math.random() * 79) + '.jpg)'});
+
+		function reloadPage() {
+			location.reload();
+		}
+	</script>
+</body>
+</html>
